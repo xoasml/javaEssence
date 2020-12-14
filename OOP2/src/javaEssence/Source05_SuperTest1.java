@@ -1,7 +1,5 @@
 package javaEssence;
 
-import java.net.URL;
-
 public class Source05_SuperTest1 {
 	public static void main(String[] args) {
 		Child c = new Child();
