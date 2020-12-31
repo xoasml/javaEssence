@@ -217,6 +217,8 @@ public class Source04_MyVector<E> implements List{
 		v.add("2");
 		v.add("2");
 		v.add(4, "1");
+		
+		System.out.println(v);
 	}
 	//----------------------------------------
 	
