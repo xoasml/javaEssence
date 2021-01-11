@@ -2,36 +2,36 @@ package example;
 
 import java.util.ArrayList;
 
-class Fruit               { public String toString() { return "Fruit"; } }
-class Apple extends Fruit { public String toString() { return "Apple"; } }
-class Grape extends Fruit { public String toString() { return "Grape"; } }
+class Fruit1               { public String toString() { return "Fruit1"; } }
+class Apple1 extends Fruit1 { public String toString() { return "Apple1"; } }
+class Grape1 extends Fruit1 { public String toString() { return "Grape1"; } }
 class Toy                 { public String toString() { return "Toy";   } }
 
 
 public class Source01_FrutBoxEx1 {
 	public static void main(String[] args) {
-		Box<Fruit> fruitBox = new Box<>();
-		Box<Apple> appleBox = new Box<>();
-		Box<Toy> toyBox = new Box<>();
-//		Box<Apple> grapeBox = new Box<Grape>(); // 에러 타입 불일치
+		Box1<Fruit1> fruitBox1 = new Box1<>();
+		Box1<Apple1> appleBox1 = new Box1<>();
+		Box1<Toy> toyBox1 = new Box1<>();
+//		Box1<Apple1> grapeBox1 = new Box1<Grape1>(); // 에러 타입 불일치
 		
-		fruitBox.add(new Fruit());
-		fruitBox.add(new Apple()); // Ok. void add(Frit item)
+		fruitBox1.add(new Fruit1());
+		fruitBox1.add(new Apple1()); // Ok. void add(Frit item)
 		
-		appleBox.add(new Apple());
-		appleBox.add(new Apple());
-//		appleBox.add(new Toy());  // 에러. Box<Apple>에는 Apple만 담을 수 있음
+		appleBox1.add(new Apple1());
+		appleBox1.add(new Apple1());
+//		appleBox1.add(new Toy());  // 에러. Box1<Apple1>에는 Apple1만 담을 수 있음
 		
-		toyBox.add(new Toy());
-//		toyBox.add(new Apple());  // 에러. Box<Toy>에는 Toy만 담을 수 있음.
+		toyBox1.add(new Toy());
+//		toyBox1.add(new Apple1());  // 에러. Box1<Toy>에는 Toy만 담을 수 있음.
 		
-		System.out.println(fruitBox);
-		System.out.println(appleBox);
-		System.out.println(toyBox);
+		System.out.println(fruitBox1);
+		System.out.println(appleBox1);
+		System.out.println(toyBox1);
 	}
 }
 
-class Box<T>{
+class Box1<T>{
 	ArrayList<T> list = new ArrayList<T>();
 	
 	void add(T item) {
