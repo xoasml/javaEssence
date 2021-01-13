@@ -1,4 +1,4 @@
-package example;
+package memo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-public class NoteFrom812To813_MethodReference {
+public class Note812To813_MethodReference {
 	public static void main(String[] args) {
 		Function<String, Integer> f1 = s -> Integer.parseInt(s); // 람다식
 		Function<String, Integer> f2 = Integer::parseInt; // 메소드 참조

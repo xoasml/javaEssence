@@ -1,4 +1,4 @@
-package example;
+package memo;
 
 @FunctionalInterface
 interface MyMethod {

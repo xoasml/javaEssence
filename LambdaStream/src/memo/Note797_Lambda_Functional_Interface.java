@@ -1,4 +1,4 @@
-package example;
+package memo;
 
 //함수형 인터페이스
 @FunctionalInterface
